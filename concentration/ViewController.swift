@@ -17,7 +17,18 @@ class ViewController: UIViewController {
         return (cardButtons.count + 1) / 2
     }
     
-    var flipCardCount = 0 {didSet {flipCardLabel.text = "flipped: \(flipCardCount)"} }
+    private(set) var flipCardCount = 0
+    {
+        didSet {
+            let attributes: [NSAttributedString.Key:Any] = [
+                .strokeWidth : 5.0
+                .strokeColor : col
+            ]
+            flipCardLabel.text = "flipped: \(flipCardCount)"
+            
+        }
+        
+    }
     
     @IBOutlet weak var flipCardLabel: UILabel!
     
@@ -49,15 +60,18 @@ class ViewController: UIViewController {
         }
     }
     
-    var imagesArray = ["😻", "🍑", "🏝", "🎈", "👙", "👗", "👑", "👠"]
-    var emoji = [Int:String]()
+   // var imagesArray = ["😻", "🍑", "🏝", "🎈", "👙", "👗", "👑", "👠"]
+    var imagesArray = "😻🍑🏝🎈👙👗👑👠"
+
+    var emoji = [Card:String]()
     
     func emoji(for card: Card) -> String {
-        if emoji[card.indexNbr] == nil, imagesArray.count > 0 {
-            emoji[card.indexNbr] = imagesArray.remove(at: imagesArray.count.arc4andom)
+        if emoji[card] == nil, imagesArray.count > 0 {
+            let randomStringIndex = imagesArray.index(imagesArray.startIndex, offsetBy: imagesArray.count.arc4andom)
+            emoji[card] = String(imagesArray.remove(at: randomStringIndex))
         }
-        if emoji[card.indexNbr] != nil { // can also write return emoji[card.indexNbr] ?? "?"
-            return emoji[card.indexNbr]!
+        if emoji[card] != nil { // can also write return emoji[card.indexNbr] ?? "?"
+            return emoji[card]!
         } else {
             return "?"
         }

@@ -8,11 +8,17 @@
 
 import Foundation
 
-struct Card
+struct Card: Hashable
 {
+    var hashValue: Int { return indexNbr }
+    
+    static func == (lhs: Card, rhs: Card) -> Bool {
+        return lhs.indexNbr == rhs.indexNbr
+    }
+    
     var isFlipped = false
     var isMatched = false
-    var indexNbr: Int
+    private var indexNbr: Int
     
     init (_ indexNbr: Int) {
         self.indexNbr = indexNbr

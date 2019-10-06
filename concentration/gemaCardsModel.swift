@@ -38,7 +38,7 @@ class cardModel
 
             if let indexMatch = indexFirstFlippedCardd, indexMatch != index {
                 
-                if cardArray[index].indexNbr == cardArray[indexMatch].indexNbr {
+                if cardArray[index] == cardArray[indexMatch] {
                     cardArray[index].isMatched = true
                     cardArray[indexMatch].isMatched = true
                 }
@@ -55,9 +55,9 @@ class cardModel
             let newCard = Card(identifier)
             cardArray += [newCard, newCard]
         }
-        for card in cardArray {
-            print(card.indexNbr)
-        }
+//        for card in cardArray {
+//            print(card.indexNbr)
+//        }
         print ("lets random")
         for identifier in 0..<(nbrOfCards * 2) {
             let randomIndex = Int.random(in: 0..<(nbrOfCards * 2))
@@ -65,9 +65,9 @@ class cardModel
             cardArray[identifier] = cardArray[randomIndex]
             cardArray[randomIndex] = box
         }
-        for card in cardArray {
-            print(card.indexNbr)
-        }
+//        for card in cardArray {
+//            print(card.indexNbr)
+//        }
     }
     
     
