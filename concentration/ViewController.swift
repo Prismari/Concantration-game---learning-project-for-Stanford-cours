@@ -10,6 +10,17 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var startScreen: UIButton! {
+        didSet{
+            showNewGameScreen()
+        }
+    }
+    
+    private func showNewGameScreen() {
+        if let startScreenButtn = startScreen {
+            startScreenButtn.backgroundColor = UIColor(white: 1, alpha: 0.5)
+        }
+    }
     
     lazy var game: cardModel = cardModel(nbrOfCards: nbrOfCards)
     
@@ -20,17 +31,28 @@ class ViewController: UIViewController {
     private(set) var flipCardCount = 0
     {
         didSet {
-            let attributes: [NSAttributedString.Key:Any] = [
-                .strokeWidth : 5.0
-                .strokeColor : col
-            ]
-            flipCardLabel.text = "flipped: \(flipCardCount)"
-            
+            updateFlipCountLabel()
         }
         
     }
+    private func updateFlipCountLabel() {
+        let attributes: [NSAttributedString.Key:Any]
+            = [
+            .strokeWidth : 4.0,
+            .strokeColor : #colorLiteral(red: 1, green: 0.5401149988, blue: 0.8455886245, alpha: 1)
+            
+        ]
+        let attributedString = NSAttributedString(string: "flipped: \(flipCardCount)", attributes: attributes)
+        
+        flipCardLabel.attributedText = attributedString
+        
+    }
     
-    @IBOutlet weak var flipCardLabel: UILabel!
+    @IBOutlet weak var flipCardLabel: UILabel! {
+        didSet{
+            updateFlipCountLabel()
+        }
+    }
     
     @IBOutlet var cardButtons: [UIButton]!
     
@@ -56,6 +78,9 @@ class ViewController: UIViewController {
             } else {
                 currentButton.setTitle(" ", for: UIControlState.normal)
                 currentButton.backgroundColor = currentCard.isMatched ? #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0) : #colorLiteral(red: 1, green: 0.5401149988, blue: 0.8455886245, alpha: 1)
+            }
+            if index == 0 {
+                showNewGameScreen()
             }
         }
     }
