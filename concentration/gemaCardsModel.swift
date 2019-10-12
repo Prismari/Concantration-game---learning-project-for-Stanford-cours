@@ -48,6 +48,20 @@ class cardModel
                 indexFirstFlippedCardd = index
             }
         }
+        
+    }
+    
+    func checkAllCardsAreMatvhed() -> Bool {
+        var isNotMatched:Bool = true
+        for index in cardArray.indices
+        {
+            if !cardArray[index].isMatched
+            {
+                isNotMatched = false
+                break
+            }
+        }
+        return isNotMatched
     }
     
     init (nbrOfCards: Int) {
@@ -55,18 +69,12 @@ class cardModel
             let newCard = Card(identifier)
             cardArray += [newCard, newCard]
         }
-//        for card in cardArray {
-//            print(card.indexNbr)
-//        }
-        print ("lets random")
-        for identifier in 0..<(nbrOfCards * 2) {
-            let randomIndex = Int.random(in: 0..<(nbrOfCards * 2))
-            let box = cardArray[identifier]
-            cardArray[identifier] = cardArray[randomIndex]
-            cardArray[randomIndex] = box
-        }
-//        for card in cardArray {
-//            print(card.indexNbr)
+//        print ("lets random")
+//        for identifier in 0..<(nbrOfCards * 2) {
+//            let randomIndex = Int.random(in: 0..<(nbrOfCards * 2))
+//            let box = cardArray[identifier]
+//            cardArray[identifier] = cardArray[randomIndex]
+//            cardArray[randomIndex] = box
 //        }
     }
     

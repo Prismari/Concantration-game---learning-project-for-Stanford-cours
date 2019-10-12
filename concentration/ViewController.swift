@@ -10,18 +10,6 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var startScreen: UIButton! {
-        didSet{
-            showNewGameScreen()
-        }
-    }
-    
-    private func showNewGameScreen() {
-        if let startScreenButtn = startScreen {
-            startScreenButtn.backgroundColor = UIColor(white: 1, alpha: 0.5)
-        }
-    }
-    
     lazy var game: cardModel = cardModel(nbrOfCards: nbrOfCards)
     
     var nbrOfCards: Int {
@@ -54,17 +42,43 @@ class ViewController: UIViewController {
         }
     }
     
+    
+    private func startNewGame() {
+        
+        game = cardModel(nbrOfCards: nbrOfCards)
+        updateViewFromModel()
+        flipCardCount = 0
+        updateFlipCountLabel()
+    }
+    
+    
     @IBOutlet var cardButtons: [UIButton]!
     
     @IBAction func touchCard(_ sender: UIButton) {
         flipCardCount += 1
         if let CardNumber = cardButtons.index(of: sender) {
             game.chooseCard(at: CardNumber)
+            if game.checkAllCardsAreMatvhed()
+            {
+                showFinishPopUp()
+            }
             updateViewFromModel()
         }
         else {
             print ("error")
         }
+    }
+    //проблема: две последние карты получают isFlipped - true и больше он не меняется никогда - те при обновлении вью они всегда считаются перевернутыми
+    
+    func showFinishPopUp() {
+        startNewGame()
+        let popUpVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "sbPopUpID") as! FinishPopUpViewController 
+        
+        self.addChildViewController(popUpVC)
+        popUpVC.view.frame = self.view.frame
+        self.view.addSubview(popUpVC.view)
+        
+        popUpVC.didMove(toParentViewController: self)
     }
     
     func updateViewFromModel () {
@@ -78,9 +92,6 @@ class ViewController: UIViewController {
             } else {
                 currentButton.setTitle(" ", for: UIControlState.normal)
                 currentButton.backgroundColor = currentCard.isMatched ? #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0) : #colorLiteral(red: 1, green: 0.5401149988, blue: 0.8455886245, alpha: 1)
-            }
-            if index == 0 {
-                showNewGameScreen()
             }
         }
     }
