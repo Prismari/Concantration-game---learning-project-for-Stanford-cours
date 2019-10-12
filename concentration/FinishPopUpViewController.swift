@@ -13,9 +13,10 @@ class FinishPopUpViewController: UIViewController {
     @IBAction func removePopUp(_ sender: Any) {
         self.view.removeFromSuperview()
     }
+    @IBOutlet weak var messegeView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        messegeView.layer.cornerRadius = 24
         // Do any additional setup after loading the view.
     }
     

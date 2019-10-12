@@ -9,6 +9,10 @@
 import UIKit
 
 class ViewController: UIViewController {
+  
+    //MARK: —  Start the Game
+    
+    var theme: (String, UIColor, UIColor)?
     
     lazy var game: cardModel = cardModel(nbrOfCards: nbrOfCards)
     
@@ -23,6 +27,17 @@ class ViewController: UIViewController {
         }
         
     }
+    
+    private func startNewGame() {
+        
+        game = cardModel(nbrOfCards: nbrOfCards)
+        updateViewFromModel()
+        flipCardCount = 0
+        updateFlipCountLabel()
+    }
+    
+    //MARK: — Flip counter handling
+    
     private func updateFlipCountLabel() {
         let attributes: [NSAttributedString.Key:Any]
             = [
@@ -42,15 +57,38 @@ class ViewController: UIViewController {
         }
     }
     
+    //MARK: —  Finish and restart the game
     
-    private func startNewGame() {
+    func showFinishPopUp() {
+        startNewGame()
+        let popUpVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "sbPopUpID") as! FinishPopUpViewController
         
-        game = cardModel(nbrOfCards: nbrOfCards)
-        updateViewFromModel()
-        flipCardCount = 0
-        updateFlipCountLabel()
+        self.addChildViewController(popUpVC)
+        popUpVC.view.frame = self.view.frame
+        self.view.addSubview(popUpVC.view)
+        
+        popUpVC.didMove(toParentViewController: self)
     }
     
+    //MARK: —  Show current view
+    
+    func updateViewFromModel () {
+        for index in cardButtons.indices {
+            let currentButton = cardButtons[index]
+            let currentCard = game.cardArray[index]
+            
+            if currentCard.isFlipped == true {
+                currentButton.setTitle(emoji(for: currentCard), for: UIControlState.normal)
+                currentButton.backgroundColor = #colorLiteral(red: 0, green: 0.7245563865, blue: 0.7277783751, alpha: 1)
+            } else {
+                currentButton.setTitle(" ", for: UIControlState.normal)
+                currentButton.backgroundColor = currentCard.isMatched ? #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0) : #colorLiteral(red: 1, green: 0.5401149988, blue: 0.8455886245, alpha: 1)
+            }
+        }
+    }
+    
+    
+    //MARK: —  Cards handling
     
     @IBOutlet var cardButtons: [UIButton]!
     
@@ -68,52 +106,26 @@ class ViewController: UIViewController {
             print ("error")
         }
     }
-    //проблема: две последние карты получают isFlipped - true и больше он не меняется никогда - те при обновлении вью они всегда считаются перевернутыми
-    
-    func showFinishPopUp() {
-        startNewGame()
-        let popUpVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "sbPopUpID") as! FinishPopUpViewController 
+
+    //MARK: —  Emoji handling
+        var imagesArray = "😻🍑🏝🎈👙👗👑👠"
+
+        var emoji = [Card:String]()
         
-        self.addChildViewController(popUpVC)
-        popUpVC.view.frame = self.view.frame
-        self.view.addSubview(popUpVC.view)
-        
-        popUpVC.didMove(toParentViewController: self)
-    }
-    
-    func updateViewFromModel () {
-        for index in cardButtons.indices {
-            let currentButton = cardButtons[index]
-            let currentCard = game.cardArray[index]
-            
-            if currentCard.isFlipped == true {
-                currentButton.setTitle(emoji(for: currentCard), for: UIControlState.normal)
-                currentButton.backgroundColor = #colorLiteral(red: 0, green: 0.7245563865, blue: 0.7277783751, alpha: 1)
+        func emoji(for card: Card) -> String {
+            if emoji[card] == nil, imagesArray.count > 0 {
+                let randomStringIndex = imagesArray.index(imagesArray.startIndex, offsetBy: imagesArray.count.arc4andom)
+                emoji[card] = String(imagesArray.remove(at: randomStringIndex))
+            }
+            if emoji[card] != nil { // can also write return emoji[card.indexNbr] ?? "?"
+                return emoji[card]!
             } else {
-                currentButton.setTitle(" ", for: UIControlState.normal)
-                currentButton.backgroundColor = currentCard.isMatched ? #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0) : #colorLiteral(red: 1, green: 0.5401149988, blue: 0.8455886245, alpha: 1)
+                return "?"
             }
         }
     }
-    
-   // var imagesArray = ["😻", "🍑", "🏝", "🎈", "👙", "👗", "👑", "👠"]
-    var imagesArray = "😻🍑🏝🎈👙👗👑👠"
 
-    var emoji = [Card:String]()
     
-    func emoji(for card: Card) -> String {
-        if emoji[card] == nil, imagesArray.count > 0 {
-            let randomStringIndex = imagesArray.index(imagesArray.startIndex, offsetBy: imagesArray.count.arc4andom)
-            emoji[card] = String(imagesArray.remove(at: randomStringIndex))
-        }
-        if emoji[card] != nil { // can also write return emoji[card.indexNbr] ?? "?"
-            return emoji[card]!
-        } else {
-            return "?"
-        }
-    }
-}
-
 extension Int {
     var arc4andom: Int {
         if self > 0 {

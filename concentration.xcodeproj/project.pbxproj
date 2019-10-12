@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4164D51623522FD200E37E1E /* FinishPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4164D51523522FD200E37E1E /* FinishPopUpViewController.swift */; };
+		4164D5182352566300E37E1E /* ThemeChoseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4164D5172352566300E37E1E /* ThemeChoseViewController.swift */; };
+		4164D51A235264C400E37E1E /* ThemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4164D519235264C400E37E1E /* ThemeModel.swift */; };
 		D52661542310066F002EF5BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52661532310066F002EF5BE /* AppDelegate.swift */; };
 		D52661562310066F002EF5BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52661552310066F002EF5BE /* ViewController.swift */; };
 		D52661592310066F002EF5BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D52661572310066F002EF5BE /* Main.storyboard */; };
@@ -19,6 +21,8 @@
 
 /* Begin PBXFileReference section */
 		4164D51523522FD200E37E1E /* FinishPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishPopUpViewController.swift; sourceTree = "<group>"; };
+		4164D5172352566300E37E1E /* ThemeChoseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeChoseViewController.swift; sourceTree = "<group>"; };
+		4164D519235264C400E37E1E /* ThemeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeModel.swift; sourceTree = "<group>"; };
 		D52661502310066F002EF5BE /* concentration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = concentration.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D52661532310066F002EF5BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D52661552310066F002EF5BE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +69,8 @@
 				D526616823101E3C002EF5BE /* gemaCardsModel.swift */,
 				D526616623101E1C002EF5BE /* cardModel.swift */,
 				D52661572310066F002EF5BE /* Main.storyboard */,
+				4164D5172352566300E37E1E /* ThemeChoseViewController.swift */,
+				4164D519235264C400E37E1E /* ThemeModel.swift */,
 				4164D51523522FD200E37E1E /* FinishPopUpViewController.swift */,
 				D526615F2310066F002EF5BE /* Info.plist */,
 			);
@@ -153,9 +159,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4164D51A235264C400E37E1E /* ThemeModel.swift in Sources */,
 				D52661562310066F002EF5BE /* ViewController.swift in Sources */,
 				D52661542310066F002EF5BE /* AppDelegate.swift in Sources */,
 				4164D51623522FD200E37E1E /* FinishPopUpViewController.swift in Sources */,
+				4164D5182352566300E37E1E /* ThemeChoseViewController.swift in Sources */,
 				D526616723101E1C002EF5BE /* cardModel.swift in Sources */,
 				D526616923101E3C002EF5BE /* gemaCardsModel.swift in Sources */,
 			);
