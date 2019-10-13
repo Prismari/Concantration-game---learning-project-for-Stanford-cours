@@ -181,7 +181,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-180" y="257"/>
+            <point key="canvasLocation" x="287" y="117"/>
         </scene>
         <!--Finish Pop Up View Controller-->
         <scene sceneID="NQt-ja-bvw">
@@ -198,17 +198,17 @@
                                         <rect key="frame" x="55.666666666666686" y="138" width="163" height="33"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" title="Tap for playing again!">
-                                            <color key="titleColor" red="0.94057053329999996" green="0.56378608939999997" blue="0.83139604330000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="titleColor" systemColor="systemTealColor" red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="removePopUp:" destination="KgS-lH-ROa" eventType="touchUpInside" id="24c-g2-kb5"/>
+                                            <segue destination="vdr-tm-eUv" kind="show" id="VhH-Fk-i9r"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congratulation!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DMv-ru-qJx">
                                         <rect key="frame" x="27.666666666666671" y="64.666666666666657" width="218.66666666666663" height="39.666666666666657"/>
                                         <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="33"/>
-                                        <color key="textColor" red="0.94057053329999996" green="0.56378608939999997" blue="0.83139604330000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="textColor" systemColor="systemTealColor" red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="highlightedColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </label>
                                 </subviews>
@@ -221,7 +221,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.80000001190000003" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="wTC-YG-jq4" firstAttribute="centerX" secondItem="nk6-es-rUO" secondAttribute="centerX" id="Ewh-ff-HJX"/>
                             <constraint firstItem="wTC-YG-jq4" firstAttribute="leading" secondItem="4Ea-lD-B1e" secondAttribute="leading" constant="70" id="HIe-7p-XJE"/>
@@ -236,82 +236,87 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yqi-qy-ffV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="497" y="257"/>
+            <point key="canvasLocation" x="-794" y="1054"/>
         </scene>
         <!--Theme Chose View Controller-->
         <scene sceneID="LDQ-hy-xmu">
             <objects>
                 <viewController id="vdr-tm-eUv" customClass="ThemeChoseViewController" customModule="concentration" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jkb-oQ-GFA">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lets start the Game Choose the theme:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ov4-Q3-ypB">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lets start the Game Choose the theme:" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ov4-Q3-ypB">
                                 <rect key="frame" x="106.00000000000001" y="80" width="202.33333333333337" height="57.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" systemColor="systemTealColor" red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="rg7-nc-1ls">
-                                <rect key="frame" x="20" y="161" width="374" height="325"/>
+                                <rect key="frame" x="20" y="161" width="374" height="305"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="yuW-uL-2g2">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="103"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="96.333333333333329"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JEF-i4-MPX">
-                                                <rect key="frame" x="0.0" y="0.0" width="119.33333333333333" height="103"/>
-                                                <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.80000001190000003" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                <state key="normal" title="Button"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="119.33333333333333" height="96.333333333333329"/>
+                                                <color key="backgroundColor" red="0.54164883853432377" green="0.54277197472229055" blue="0.61157124013197972" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Party">
+                                                    <color key="titleColor" red="0.94057053329999996" green="0.56378608939999997" blue="0.83139604330000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="thouchChosenTheme:" destination="vdr-tm-eUv" eventType="touchUpInside" id="fMl-7O-CNL"/>
-                                                    <segue destination="BYZ-38-t0r" kind="show" id="fgp-CY-IAt"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z1b-MA-5OI">
-                                                <rect key="frame" x="127.33333333333334" y="0.0" width="119.33333333333334" height="103"/>
-                                                <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.80000001190000003" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                <state key="normal" title="Button"/>
+                                                <rect key="frame" x="127.33333333333334" y="0.0" width="119.33333333333334" height="96.333333333333329"/>
+                                                <color key="backgroundColor" red="0.54164883850000001" green="0.54277197470000005" blue="0.61157124009999997" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Animals">
+                                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="thouchChosenTheme:" destination="vdr-tm-eUv" eventType="touchUpInside" id="6vW-Vb-IsW"/>
-                                                    <segue destination="BYZ-38-t0r" kind="show" id="6hk-Ws-k9C"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sya-1H-Xaz">
-                                                <rect key="frame" x="254.66666666666671" y="0.0" width="119.33333333333334" height="103"/>
-                                                <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.80000001190000003" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                <state key="normal" title="Button"/>
+                                                <rect key="frame" x="254.66666666666671" y="0.0" width="119.33333333333334" height="96.333333333333329"/>
+                                                <color key="backgroundColor" red="0.54164883850000001" green="0.54277197470000005" blue="0.61157124009999997" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Space">
+                                                    <color key="titleColor" systemColor="systemIndigoColor" red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="thouchChosenTheme:" destination="vdr-tm-eUv" eventType="touchUpInside" id="OMa-RJ-jqV"/>
-                                                    <segue destination="BYZ-38-t0r" kind="showDetail" id="Dmz-0I-JY5"/>
                                                 </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="FC2-96-Fbl">
-                                        <rect key="frame" x="0.0" y="111" width="374" height="103"/>
+                                        <rect key="frame" x="0.0" y="104.33333333333331" width="374" height="96.333333333333314"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VXt-hO-RHZ">
-                                                <rect key="frame" x="0.0" y="0.0" width="119.33333333333333" height="103"/>
-                                                <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.80000001190000003" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                <state key="normal" title="Button"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="119.33333333333333" height="96.333333333333329"/>
+                                                <color key="backgroundColor" red="0.54164883850000001" green="0.54277197470000005" blue="0.61157124009999997" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Travel"/>
                                                 <connections>
                                                     <action selector="thouchChosenTheme:" destination="vdr-tm-eUv" eventType="touchUpInside" id="Lj0-yb-KrO"/>
-                                                    <segue destination="BYZ-38-t0r" kind="show" id="YAF-91-dmG"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qAx-u8-nU2">
-                                                <rect key="frame" x="127.33333333333334" y="0.0" width="119.33333333333334" height="103"/>
-                                                <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.80000001190000003" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                <state key="normal" title="Button"/>
+                                                <rect key="frame" x="127.33333333333334" y="0.0" width="119.33333333333334" height="96.333333333333329"/>
+                                                <color key="backgroundColor" red="0.54164883850000001" green="0.54277197470000005" blue="0.61157124009999997" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Sport">
+                                                    <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="thouchChosenTheme:" destination="vdr-tm-eUv" eventType="touchUpInside" id="wpg-gU-lLp"/>
-                                                    <segue destination="BYZ-38-t0r" kind="show" id="uGu-8A-chs"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0YK-k2-Yiq">
-                                                <rect key="frame" x="254.66666666666671" y="0.0" width="119.33333333333334" height="103"/>
-                                                <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.80000001190000003" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                <state key="normal" title="Button"/>
+                                                <rect key="frame" x="254.66666666666671" y="0.0" width="119.33333333333334" height="96.333333333333329"/>
+                                                <color key="backgroundColor" red="0.54164883850000001" green="0.54277197470000005" blue="0.61157124009999997" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Office">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="thouchChosenTheme:" destination="vdr-tm-eUv" eventType="touchUpInside" id="B88-jI-e9S"/>
                                                 </connections>
@@ -319,27 +324,27 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="cZX-re-ugW">
-                                        <rect key="frame" x="0.0" y="222" width="374" height="103"/>
+                                        <rect key="frame" x="0.0" y="208.66666666666671" width="374" height="96.333333333333343"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hqt-5U-H4z">
-                                                <rect key="frame" x="0.0" y="0.0" width="119.33333333333333" height="103"/>
-                                                <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.80000001190000003" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="119.33333333333333" height="96.333333333333329"/>
+                                                <color key="backgroundColor" red="0.54164883850000001" green="0.54277197470000005" blue="0.61157124009999997" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Button"/>
                                                 <connections>
                                                     <action selector="thouchChosenTheme:" destination="vdr-tm-eUv" eventType="touchUpInside" id="n03-HS-DXK"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="caE-vF-daT">
-                                                <rect key="frame" x="127.33333333333334" y="0.0" width="119.33333333333334" height="103"/>
-                                                <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.80000001190000003" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <rect key="frame" x="127.33333333333334" y="0.0" width="119.33333333333334" height="96.333333333333329"/>
+                                                <color key="backgroundColor" red="0.54164883850000001" green="0.54277197470000005" blue="0.61157124009999997" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Button"/>
                                                 <connections>
                                                     <action selector="thouchChosenTheme:" destination="vdr-tm-eUv" eventType="touchUpInside" id="gPd-J1-pom"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ATg-ql-ctU">
-                                                <rect key="frame" x="254.66666666666671" y="0.0" width="119.33333333333334" height="103"/>
-                                                <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.80000001190000003" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <rect key="frame" x="254.66666666666671" y="0.0" width="119.33333333333334" height="96.333333333333329"/>
+                                                <color key="backgroundColor" red="0.54164883850000001" green="0.54277197470000005" blue="0.61157124009999997" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Button"/>
                                                 <connections>
                                                     <action selector="thouchChosenTheme:" destination="vdr-tm-eUv" eventType="touchUpInside" id="IpX-qf-VLR"/>
@@ -349,19 +354,32 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yc9-7v-mV8">
+                                <rect key="frame" x="156" y="506" width="102" height="30"/>
+                                <state key="normal" title="TAP TO START">
+                                    <color key="titleColor" systemColor="systemTealColor" red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="fC0-uv-SPn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="yc9-7v-mV8" firstAttribute="centerX" secondItem="Jkb-oQ-GFA" secondAttribute="centerX" id="17l-QO-kiQ"/>
                             <constraint firstItem="ov4-Q3-ypB" firstAttribute="centerX" secondItem="Jkb-oQ-GFA" secondAttribute="centerX" id="Ha7-QU-NUx"/>
                             <constraint firstItem="ov4-Q3-ypB" firstAttribute="top" secondItem="stV-uh-GpO" secondAttribute="top" constant="80" id="SH6-y7-CX9"/>
                             <constraint firstItem="rg7-nc-1ls" firstAttribute="leading" secondItem="stV-uh-GpO" secondAttribute="leading" constant="20" id="Uon-vK-48A"/>
+                            <constraint firstItem="yc9-7v-mV8" firstAttribute="top" secondItem="rg7-nc-1ls" secondAttribute="bottom" constant="40" id="dYc-YJ-S8r"/>
                             <constraint firstItem="stV-uh-GpO" firstAttribute="trailing" secondItem="rg7-nc-1ls" secondAttribute="trailing" constant="20" id="dj2-u2-gRS"/>
                             <constraint firstItem="rg7-nc-1ls" firstAttribute="top" secondItem="stV-uh-GpO" secondAttribute="top" constant="161" id="lgz-wl-auH"/>
                             <constraint firstItem="stV-uh-GpO" firstAttribute="bottom" secondItem="rg7-nc-1ls" secondAttribute="bottom" constant="250" id="ukg-F3-0z5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="stV-uh-GpO"/>
                     </view>
+                    <navigationItem key="navigationItem" id="E7h-6c-oDR"/>
                     <connections>
+                        <outlet property="startGameButton" destination="yc9-7v-mV8" id="pDL-d5-y1h"/>
                         <outletCollection property="themeButtons" destination="JEF-i4-MPX" collectionClass="NSMutableArray" id="tjv-xp-b6c"/>
                         <outletCollection property="themeButtons" destination="z1b-MA-5OI" collectionClass="NSMutableArray" id="EuN-tb-zin"/>
                         <outletCollection property="themeButtons" destination="sya-1H-Xaz" collectionClass="NSMutableArray" id="1nX-tE-8bi"/>
@@ -375,10 +393,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wcb-o0-6bb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-878.26086956521749" y="256.79347826086956"/>
+            <point key="canvasLocation" x="-719" y="117"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="uGu-8A-chs"/>
-    </inferredMetricsTieBreakers>
 </document>
