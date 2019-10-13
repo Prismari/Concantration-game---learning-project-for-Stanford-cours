@@ -15,7 +15,7 @@ struct Theme {
         case two
     }
     
-    func getTheTheme(by theme: Theme) -> (String, UIColor, UIColor)
+    mutating func getTheTheme(by theme: Theme) -> (String, UIColor, UIColor)
     {
         switch theme {
         case .one:

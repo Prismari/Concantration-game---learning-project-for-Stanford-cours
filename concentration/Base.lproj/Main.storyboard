@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="concentration" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainGameVC" id="BYZ-38-t0r" customClass="ViewController" customModule="concentration" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -181,7 +181,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="24.637681159420293" y="256.79347826086956"/>
+            <point key="canvasLocation" x="-180" y="257"/>
         </scene>
         <!--Finish Pop Up View Controller-->
         <scene sceneID="NQt-ja-bvw">
@@ -236,7 +236,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yqi-qy-ffV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="784" y="257"/>
+            <point key="canvasLocation" x="497" y="257"/>
         </scene>
         <!--Theme Chose View Controller-->
         <scene sceneID="LDQ-hy-xmu">
@@ -264,7 +264,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <connections>
                                                     <action selector="thouchChosenTheme:" destination="vdr-tm-eUv" eventType="touchUpInside" id="fMl-7O-CNL"/>
-                                                    <segue destination="BYZ-38-t0r" kind="show" id="8UZ-j0-yAi"/>
+                                                    <segue destination="BYZ-38-t0r" kind="show" id="fgp-CY-IAt"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z1b-MA-5OI">
@@ -273,6 +273,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <connections>
                                                     <action selector="thouchChosenTheme:" destination="vdr-tm-eUv" eventType="touchUpInside" id="6vW-Vb-IsW"/>
+                                                    <segue destination="BYZ-38-t0r" kind="show" id="6hk-Ws-k9C"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sya-1H-Xaz">
@@ -281,6 +282,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <connections>
                                                     <action selector="thouchChosenTheme:" destination="vdr-tm-eUv" eventType="touchUpInside" id="OMa-RJ-jqV"/>
+                                                    <segue destination="BYZ-38-t0r" kind="showDetail" id="Dmz-0I-JY5"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -294,6 +296,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <connections>
                                                     <action selector="thouchChosenTheme:" destination="vdr-tm-eUv" eventType="touchUpInside" id="Lj0-yb-KrO"/>
+                                                    <segue destination="BYZ-38-t0r" kind="show" id="YAF-91-dmG"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qAx-u8-nU2">
@@ -302,6 +305,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <connections>
                                                     <action selector="thouchChosenTheme:" destination="vdr-tm-eUv" eventType="touchUpInside" id="wpg-gU-lLp"/>
+                                                    <segue destination="BYZ-38-t0r" kind="show" id="uGu-8A-chs"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0YK-k2-Yiq">
@@ -374,4 +378,7 @@
             <point key="canvasLocation" x="-878.26086956521749" y="256.79347826086956"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="uGu-8A-chs"/>
+    </inferredMetricsTieBreakers>
 </document>

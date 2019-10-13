@@ -14,8 +14,8 @@
             filePath = "concentration/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
             landmarkName = "touchCard(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -24,14 +24,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "232CB167-1054-4D44-AC78-F48D505077D2"
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "concentration/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
             landmarkName = "touchCard(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -66,6 +66,130 @@
             endingLineNumber = "64"
             landmarkName = "checkAllCardsAreMatvhed()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BB861334-6511-4E4B-974E-2F06816C1782"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "concentration/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "ViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "BB861334-6511-4E4B-974E-2F06816C1782 - 15d612f446d2f07f"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "concentration.ViewController.game.getter : concentration.cardModel"
+                  moduleName = "concentration"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mariaugorets/Documents/swiftStart/concantration/concentration/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "376">
+               </Location>
+               <Location
+                  uuid = "BB861334-6511-4E4B-974E-2F06816C1782 - 5456f9da57d63c3b"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "concentration.ViewController.game.setter : concentration.cardModel"
+                  moduleName = "concentration"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mariaugorets/Documents/swiftStart/concantration/concentration/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "144">
+               </Location>
+               <Location
+                  uuid = "BB861334-6511-4E4B-974E-2F06816C1782 - 39cd41e0f379736c"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "concentration.ViewController.game.modify : concentration.cardModel"
+                  moduleName = "concentration"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mariaugorets/Documents/swiftStart/concantration/concentration/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "26">
+               </Location>
+               <Location
+                  uuid = "BB861334-6511-4E4B-974E-2F06816C1782 - 8482b6bfa00a7689"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "concentration.ViewController.game.modify : concentration.cardModel with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "concentration"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mariaugorets/Documents/swiftStart/concantration/concentration/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "27">
+               </Location>
+               <Location
+                  uuid = "BB861334-6511-4E4B-974E-2F06816C1782 - 12e74d487b23b4a9"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "concentration.ViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; concentration.ViewController"
+                  moduleName = "concentration"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mariaugorets/Documents/swiftStart/concantration/concentration/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "304">
+               </Location>
+               <Location
+                  uuid = "BB861334-6511-4E4B-974E-2F06816C1782 - f52758c36940da22"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "concentration.ViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;concentration.ViewController&gt;"
+                  moduleName = "concentration"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mariaugorets/Documents/swiftStart/concantration/concentration/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "241">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E757E89C-4266-413D-A203-8512E3372D8B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "concentration/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "flipCardLabel"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -12,15 +12,27 @@ class ThemeChoseViewController: UIViewController {
 
     @IBOutlet var themeButtons: [UIButton]!
     
+    let themeForChosen = Theme()
+    
     
     @IBAction func thouchChosenTheme(_ sender: UIButton) {
-        
+        if let themeNumber = themeButtons.index(of: sender) {
+            print(themeNumber)
+            let mvc = ViewController()
+            mvc.themeNumber = themeNumber
+            print(mvc.themeNumber)
+        }
+        else{
+            print ("wtf?")
+        }
+            
     }
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
+    
+    
     
     
 }

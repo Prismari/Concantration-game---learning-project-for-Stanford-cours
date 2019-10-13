@@ -12,7 +12,8 @@ class ViewController: UIViewController {
   
     //MARK: —  Start the Game
     
-    var theme: (String, UIColor, UIColor)?
+    let tvc = ThemeChoseViewController()
+    var themeNumber:Int?
     
     lazy var game: cardModel = cardModel(nbrOfCards: nbrOfCards)
     
