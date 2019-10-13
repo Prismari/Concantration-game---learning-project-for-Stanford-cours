@@ -31,20 +31,20 @@ class Theme {
                 colorBackground = #colorLiteral(red: 0.4508578777, green: 0.9882974029, blue: 0.8376303315, alpha: 1)
             case .animals:
                 emoji = "🐱🦊🐻🐼🙉🐨🐶🐰"
-                colorCards = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
-                colorBackground = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
+                colorCards = #colorLiteral(red: 0.9994240403, green: 0.9855536819, blue: 0, alpha: 1)
+                colorBackground = #colorLiteral(red: 0, green: 0.5603182912, blue: 0, alpha: 1)
             case .space:
                 emoji = "🌎🌙✨💫🌚🚀🛸🛰"
-                colorCards = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-                colorBackground = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
+                colorCards = #colorLiteral(red: 0.9995340705, green: 0.988355577, blue: 0.4726552367, alpha: 1)
+                colorBackground = #colorLiteral(red: 0.3236978054, green: 0.1063579395, blue: 0.574860394, alpha: 1)
             case .travel:
                 emoji = "✈️🏖🏔🏄🏻‍♂️🚴🏻‍♀️🏛📸🛥"
-                colorCards = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-                colorBackground = #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1)
+                colorCards = #colorLiteral(red: 0.9995340705, green: 0.988355577, blue: 0.4726552367, alpha: 1)
+                colorBackground = #colorLiteral(red: 0.370555222, green: 0.3705646992, blue: 0.3705595732, alpha: 1)
             case.sport:
                 emoji = "⚽️🏓🥊🏹⛸🛹🏆⛳️"
-                colorCards = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-                colorBackground = #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1)
+                colorCards = #colorLiteral(red: 1, green: 0.3044164669, blue: 0.2167022984, alpha: 1)
+                colorBackground = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
             case.office:
                 emoji = "👔💅🏻👩🏻‍💻👨🏼‍💼🏢📈🗂💼"
                 colorCards = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
